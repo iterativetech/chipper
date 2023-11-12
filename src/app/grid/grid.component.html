@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Level {{level}}</h1>
+    
+<div>
+<ng-container *ngFor="let row of grid.slots">
+    <ng-container *ngFor="let slot of row">
+        <button 
+            class="button part-button" 
+            color="test" 
+            mat-flat-button 
+            [matMenuTriggerData]="{slot: slot}" 
+            [matMenuTriggerFor]="menu"
+            disabled={{slot.part.disabled}}>
+            <i class="material-icons">{{slot.part.icon}}</i>
+        </button>
+    </ng-container>
+    <br>
+</ng-container>
+</div>
+
+<button class="button" mat-flat-button color="primary" (click)="checkSolution()">
+    CHECK SOLUTION!
+</button>
+
+
+<mat-menu #menu="matMenu">
+    <ng-template matMenuContent let-slot="slot">
+        <ng-container *ngFor="let part of available_parts">
+            <button (click)="onClick(part, slot)" mat-menu-item>
+                <mat-icon>{{part.icon}}</mat-icon>
+                <span>{{part.name}}</span>
+            </button>
+        </ng-container>
+    </ng-template>
+  </mat-menu>

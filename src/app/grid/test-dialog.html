@@ -1,0 +1,12 @@
+<h2 mat-dialog-title *ngIf="data.valid_solution == false">Fail!</h2>
+<h2 mat-dialog-title *ngIf="data.valid_solution == true">Success!</h2>
+
+<mat-dialog-content class="mat-typography">
+    <h3 class="mat-typography" *ngIf="data.valid_solution == false">Errors</h3>
+    <p class="mat-typography" *ngFor="let message of data.messages">{{message}}</p>
+
+    <h3 class="mat-typography" *ngIf="data.flag != ''">Flag Segments</h3>
+    <p class="mat-typography" *ngIf="data.flag != ''">
+        {{data.flag}}
+    </p>
+</mat-dialog-content>
