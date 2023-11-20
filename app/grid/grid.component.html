@@ -1,0 +1,70 @@
+
+<mat-grid-list class="play-area" cols="1" gutterSize="5px" rowHeight="400px">
+
+    <mat-grid-tile [colspan]="1">
+        <mat-grid-list class="play-area" cols="2">
+
+            <mat-grid-tile [colspan]="1">
+                <div>
+                    <ng-container  *ngFor="let row of grid.slots">
+                        <ng-container *ngFor="let slot of row">
+                            <button 
+                                class="button part-button" 
+                                color="test" 
+                                mat-flat-button 
+                                [matMenuTriggerData]="{slot: slot}" 
+                                [matMenuTriggerFor]="menu"
+                                disabled={{slot.part.disabled}}>
+                                <i class="material-icons">{{slot.part.icon}}</i>
+                            </button>
+                        </ng-container>
+                        <br>
+                    </ng-container>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="1">
+                <mat-card class="rules-card">
+                    <mat-card-header>
+                        <mat-card-title-group>   
+
+                            <mat-card-title>
+                                RULES
+                                <button class="button submission-button" mat-flat-button color="primary" (click)="checkSolution()">
+                                    CHECK SOLUTION!
+                                </button>
+                            </mat-card-title>
+                        
+                        </mat-card-title-group>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-card-subtitle>Level {{config.level}}</mat-card-subtitle>
+                        {{rules}}
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<!--
+<mat-grid-list cols="1" gutterSize="5px" rowHeight="100px">
+    <mat-grid-tile>
+        <button class="button submission-button" mat-flat-button color="primary" (click)="checkSolution()">
+            CHECK SOLUTION!
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>
+-->
+
+<mat-menu #menu="matMenu">
+    <ng-template matMenuContent let-slot="slot">
+        <ng-container *ngFor="let part of available_parts">
+            <button (click)="onClick(part, slot)" mat-menu-item>
+                <mat-icon>{{part.icon}}</mat-icon>
+                <span>{{part.name}}</span>
+            </button>
+        </ng-container>
+    </ng-template>
+  </mat-menu>

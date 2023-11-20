@@ -1,0 +1,10 @@
+.part-card{
+    max-width: 480px;
+    min-width: 280px;
+    margin-bottom: 8px;
+}
+
+.toolbox{
+    max-height: 600px;
+    overflow: auto;
+}

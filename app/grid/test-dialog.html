@@ -1,0 +1,14 @@
+<h2 mat-dialog-title *ngIf="data.valid_solution == false">Fail!</h2>
+<h2 mat-dialog-title *ngIf="data.valid_solution == true">Success!</h2>
+
+<mat-dialog-content class="mat-typography">
+    <h3 class="mat-typography" *ngIf="data.valid_solution == false">Errors</h3>
+    <p class="mat-typography" *ngFor="let message of data.messages">{{message}}</p>
+
+    <h3 class="mat-typography" *ngIf="data.flag != ''">Flag Segments: {{data.flag}}</h3>
+
+    <a href="play?level={{data.next_level}}" *ngIf="data.valid_solution == true" class="button submission-button" mat-button-href color="primary" >
+        Progress to level {{data.next_level}}
+    </a>
+
+</mat-dialog-content>

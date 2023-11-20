@@ -1,0 +1,10 @@
+<mat-grid-list cols="4" rows="5">
+    <mat-grid-tile [colspan]="3">
+        <app-grid [passthrough_config]=config></app-grid>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="2" height="500">
+        <app-toolbox [passthrough_config]=config></app-toolbox>
+    </mat-grid-tile>
+</mat-grid-list>
+  

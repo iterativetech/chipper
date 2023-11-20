@@ -1,0 +1,90 @@
+{
+    "0": {
+        "available_parts":[],
+        "enforced_parts": [],
+        "hazards":[],
+        "grid_width": 0,
+        "grid_height": 0,
+        "rules": "There are no rules in Christmas-Town, apart from mandatory fun.",
+        "level": 0
+
+    },
+    "1": {
+        "available_parts":[
+            {"name": "Basic Power Generator", "restrictions": "None", "effects": "None", "description": "A simple part for generating power", "char": "A", "limit": 0, "stats": {"Power Generation": 1}, "icon": "battery_alert", "disabled": false, "conductive": true}
+        ],
+        "enforced_parts": [],
+        "hazards":[],
+        "grid_width": 1,
+        "grid_height": 1,
+        "rules": "Complete the level. It's not that hard... right?",
+        "level": 1
+    },
+    "2": {
+        "available_parts":[
+            {"name": "Basic Power Generator", "restrictions": "None", "effects": "None", "description": "A simple part for generating power", "char": "A", "limit": 0, "stats": {"Power Generation": 1}, "icon": "developer_board", "disabled": false,  "conductive": true},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "hvac", "disabled": false,  "conductive": false}
+        ],
+        "hazards":[
+            {"x": 1, "y": 1}
+        ],
+        "enforced_parts": [],
+        "grid_width": 3,
+        "grid_height": 3,
+        "rules": "",
+        "level": 2
+
+    },
+    "3": {
+        "available_parts":[
+            {"name": "Basic Power Generator", "restrictions": "None", "effects": "None", "description": "A simple part for generating power", "char": "A", "limit": 0, "stats": {"Power Generation": 1}, "icon": "battery_alert", "disabled": false},
+            {"name": "Strange", "restrictions": "None", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "memory", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "usb", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "router", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "share", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "cable", "disabled": false}
+
+        ],
+        "enforced_parts": [
+            {
+                "coordinate": {"x": 0, "y": 2},
+                "part": {"name": "Basic Power Generator", "restrictions": "None", "effects": "None", "description": "A simple part for generating power", "char": "A", "limit": 0, "stats": {"Power Generation": 1}, "icon": "developer_board", "disabled": true}
+            }
+        ],
+        "hazards":[
+            {"x": 1, "y": 1}
+        ],
+        "grid_width": 3,
+        "grid_height": 3,
+        "rules": "",
+        "level": 3
+    },
+    "4": {
+        "available_parts":[
+            {"name": "Basic Power Generator", "restrictions": "None", "effects": "None", "description": "A simple part for generating power", "char": "A", "limit": 0, "stats": {"Power Generation": 1}, "icon": "battery_alert", "disabled": false},
+            {"name": "Strange", "restrictions": "None", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "memory", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "usb", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "router", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "share", "disabled": false},
+            {"name": "Basic Thermal Generator", "restrictions": "Must be adjacent to a Basic Power Generator", "effects": "None", "description": "A simple part for generating heat", "char": "A", "limit": 2, "stats": {"Power Consumption": 1, "Heat Generation": 1}, "icon": "cable", "disabled": false}
+
+        ],
+        "enforced_parts": [
+            {
+                "coordinate": {"x": 0, "y": 2},
+                "part": {"name": "Basic Power Generator", "restrictions": "None", "effects": "None", "description": "A simple part for generating power", "char": "A", "limit": 0, "stats": {"Power Generation": 1}, "icon": "developer_board", "disabled": true}
+            }
+        ],
+        "hazards":[
+            {"x": 0, "y": 0},
+            {"x": 1, "y": 1},
+            {"x": 2, "y": 2},
+            {"x": 3, "y": 3},
+            {"x": 4, "y": 4},
+            {"x": 5, "y": 5}
+        ],
+        "grid_width": 6,
+        "grid_height": 6,
+        "rules": ""
+    }
+}
